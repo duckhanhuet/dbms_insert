@@ -21,7 +21,7 @@ var cn ={
 var db= pgp(cn);
 var arrayFunc= [];
 
-for (let i=0;i<5000000;i++){
+for (let i=0;i<50000000;i++){
     function func(callback) {
         var airport_code= ramdom.generate({
             length: 3,
@@ -39,7 +39,7 @@ for (let i=0;i<5000000;i++){
                 callback(null,airport_code); // print new user id;
             })
             .catch(error => {
-                callback(null,'exist')// print error;
+                callback(null,'existed')// print error;
             });
     }
 
